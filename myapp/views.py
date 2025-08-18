@@ -5,7 +5,12 @@ from .models import *
 
 def Indexview(request):
     position = PositionModel.objects.all()
+    about = AboutModel.objects.all()
+    work = ServiceworkModel.objects.all().order_by('id')[:4]
+
     context = {
-        'position':position
+        'position':position,
+        'about':about,
+        'work':work,
     }
     return render(request, 'index.html', context)

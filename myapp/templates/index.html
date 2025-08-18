@@ -15,8 +15,7 @@
                         {% for i in position %}
                         <div class="tmp-contact-about-inner">
                             <div class="thumbnail">
-                                <img src="{{ i.image.url }}"
-                                    alt="contact-img">
+                                <img src="{{ i.image.url }}" alt="contact-img">
                             </div>
                             <div class="content">
                                 <div class="title-area">
@@ -97,32 +96,30 @@
                         <div class="tmp-all-tab-content tab-content" id="v-pills-tabContent">
                             <div class="tab-pane fade  show active" id="v-pills-Javascript" role="tabpanel"
                                 aria-labelledby="v-pills-home-tab">
+
                                 <!-- Start about Area -->
                                 <div id="about" class="tmp-about-area">
                                     <div class="about-us-right-content-wrap">
+                                        {% for i in about %}
                                         <div class="section-head text-align-left mb--50">
                                             <h2
                                                 class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
-                                                About Me <span><img
+                                                {{i.maintitle|safe}} <span><img
                                                         src="{% static 'assets/images/custom-line/custom-line.png' %}"
                                                         alt="custom-line"></span>
                                             </h2>
                                             <h2
                                                 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-                                                Boost
-                                                Business Strategic <br> Solutions with Us </h2>
+                                                {{i.subtitle|safe}}</h2>
                                             <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">
-                                                Hello! I'm Fatima, a passionate your profession, e.g., Web
-                                                Developer, Graphic Designer, Data Analyst based in Dhaka. With a
-                                                strong focus on creativity, innovation, and a commitment to
-                                                continuous learning, I bring a unique blend of technical skills
-                                                and
-                                                artistic vision to each project I undertake.</p>
+                                                {{i.description|safe}}</p>
                                         </div>
+                                        {% endfor %}
 
 
                                         <div class="about-us-section-card row g-5">
-                                            <h3>What I Do?</h3>
+                                            {% for i in about %} {{i.name|safe}} {% endfor %}
+                                            {% for i in work %}
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                                 <div
                                                     class="about-us-card tmp-scroll-trigger tmp-fade-in tmponhover animation-order-4">
@@ -130,97 +127,28 @@
                                                         <div class="logo-img">
                                                             <i class="fa-regular fa-code"></i>
                                                         </div>
-                                                        <h3 class="card-title">Ui/Ux Design</h3>
+                                                        <h3 class="card-title">{{i.name|safe}}</h3>
                                                     </div>
-                                                    <p class="card-para">Each one showcases my approach and
-                                                        dedication to detail, creativity dedication to detail,
-                                                        creativity
-                                                    </p>
+                                                    <p class="card-para">{{i.description|safe}}</p>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                                <div
-                                                    class="about-us-card tmp-scroll-trigger tmp-fade-in tmponhover animation-order-5">
-                                                    <div class="card-head">
-                                                        <div class="logo-img">
-                                                            <i class="fa-light fa-palette"></i>
-                                                        </div>
-                                                        <h3 class="card-title">Web Development</h3>
-                                                    </div>
-                                                    <p class="card-para">Business consulting consul us to a provide
-                                                        expert advice businesses expert advice businesses
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                                <div
-                                                    class="about-us-card tmp-scroll-trigger tmp-fade-in tmponhover animation-order-4">
-                                                    <div class="card-head">
-                                                        <div class="logo-img">
-                                                            <i class="fa-light fa-print"></i>
-                                                        </div>
-                                                        <h3 class="card-title">Business Solutions</h3>
-                                                    </div>
-                                                    <p class="card-para">Each one showcases my approach and
-                                                        dedication to detail, creativity dedication to detail,
-                                                        creativity
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                                <div
-                                                    class="about-us-card tmp-scroll-trigger tmp-fade-in tmponhover animation-order-5">
-                                                    <div class="card-head">
-                                                        <div class="logo-img">
-                                                            <i class="fa-regular fa-handshake"></i>
-                                                        </div>
-                                                        <h3 class="card-title">Profit Partners</h3>
-                                                    </div>
-                                                    <p class="card-para">Business consulting consul us to a provide
-                                                        expert advice businesses provide advice businesses
-                                                    </p>
-                                                </div>
-                                            </div>
+                                            {% endfor %}
                                         </div>
 
                                         <div class="pt--60">
+                                            
                                             <div class="row g-5">
+                                                {% for i in work %}
                                                 <div class="col-lg-3 col-sm-6 col-12">
+                                                    
                                                     <div
                                                         class="counter-card tmp-scroll-trigger tmp-fade-in tmponhover animation-order-1">
-                                                        <h3 class="counter counter-title"><span class="odometer"
-                                                                data-count="20">00</span>k
-                                                        </h3>
-                                                        <p class="counter-para">Our Project Complete</p>
+                                                        <h3 class="counter counter-title">{{i.counter|safe}}</h3>
+                                                        <p class="counter-para">{{i.counter_para|safe}}</p>
                                                     </div>
+                                                        
                                                 </div>
-                                                <div class="col-lg-3 col-sm-6 col-12">
-                                                    <div
-                                                        class="counter-card tmp-scroll-trigger tmp-fade-in tmponhover animation-order-2">
-                                                        <h3 class="counter counter-title"><span class="odometer"
-                                                                data-count="10">00</span>k
-                                                        </h3>
-                                                        <p class="counter-para">Our Natural Products</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-sm-6 col-12">
-                                                    <div
-                                                        class="counter-card tmp-scroll-trigger tmp-fade-in tmponhover animation-order-3">
-                                                        <h3 class="counter counter-title"><span class="odometer"
-                                                                data-count="200">00</span>+
-                                                        </h3>
-                                                        <p class="counter-para">Clients Reviews</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-sm-6 col-12">
-                                                    <div
-                                                        class="counter-card tmp-scroll-trigger tmp-fade-in tmponhover animation-order-4">
-                                                        <h3 class="counter counter-title"><span class="odometer"
-                                                                data-count="2">00</span>k+
-                                                        </h3>
-                                                        <p class="counter-para">our Satisfied Clientd</p>
-                                                    </div>
-                                                </div>
+                                            {% endfor %}
                                             </div>
                                         </div>
 
