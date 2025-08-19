@@ -175,6 +175,8 @@ body::before {
   opacity: 0.05;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -7525,6 +7527,7 @@ p.description {
   -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
+
 
 /*!
 Animate.css - http://daneden.me/animate
@@ -15928,6 +15931,7 @@ Section Head
 }
 .blog-card-style-two .blog-content-wrap .blog-tags ul li {
   margin: 0;
+  
 }
 .blog-card-style-two .blog-content-wrap .blog-tags ul li a {
   color: var(--color-gray);
@@ -15938,6 +15942,7 @@ Section Head
 }
 .blog-card-style-two .blog-content-wrap .blog-tags ul li a i {
   margin-right: 10px;
+  
 }
 .blog-card-style-two .blog-content-wrap .blog-title {
   margin-top: 12px;
